@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Tue Nov 15 10:53:35 EAT 2016:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.11.1.2 - (1629631): instance a816c00e-0158-66fa-115e-000006020ef8 
+on database directory C:\Users\DELL\AppData\Roaming\NetBeans\java\solutions\pos with class loader sun.misc.Launcher$AppClassLoader@5451c3a8 
+Loaded from file:/C:/POS/POS_INTEGRATOR_PATMON/src/lib/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_60-b27
+user.dir=C:\POS\POS_INTEGRATOR_PATMON
+os.name=Windows 7
+os.arch=amd64
+os.version=6.1
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''

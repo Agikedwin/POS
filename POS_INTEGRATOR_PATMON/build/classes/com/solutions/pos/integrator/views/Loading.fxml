@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="387.0" prefWidth="543.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="19.0" layoutY="32.0" text="          Appyling Your Security Settings...">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="89.0" layoutY="253.0" text="          Loading...  Please  wait...">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="210.0" layoutY="307.0" text="Whizztech Enterprises">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="4.0" layoutY="351.0" prefHeight="19.0" prefWidth="532.0" text="International Laws Prohibit the distribution  of this software without informing the company.">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <ProgressBar layoutX="80.0" layoutY="162.0" prefHeight="18.0" prefWidth="412.0" progress="0.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="615.0" prefWidth="728.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.solutions.pos.controllers.StockOperationHomeController">
+   <children>
+      <BorderPane layoutX="10.0" layoutY="10.0" prefHeight="555.0" prefWidth="728.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <TabPane fx:id="stockTabPane" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+               <tabs>
+                  <Tab fx:id="stockingTab" text="SKU Stocking">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <BorderPane prefHeight="296.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <center>
+                                    <BorderPane fx:id="borderpaneStockingWrapper" prefHeight="241.0" prefWidth="276.0" BorderPane.alignment="CENTER">
+                                       <center>
+                                          <TableView fx:id="skuStockingTV" prefHeight="472.0" prefWidth="374.0" BorderPane.alignment="CENTER">
+                                             <columns>
+                                                <TableColumn prefWidth="75.0" text="C1" />
+                                                <TableColumn prefWidth="75.0" text="C2" />
+                                             </columns>
+                                          </TableView>
+                                       </center>
+                                       <top>
+                                          <AnchorPane prefHeight="24.0" prefWidth="475.0" style="-fx-background-color: #EBEBEB;" BorderPane.alignment="CENTER">
+                                             <children>
+                                                <TextField fx:id="stockSearch" layoutX="312.0" layoutY="8.0" AnchorPane.bottomAnchor="4.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="4.0" />
+                                                <Label layoutX="268.0" layoutY="8.0" text="Search" AnchorPane.bottomAnchor="4.0" AnchorPane.rightAnchor="179.0" AnchorPane.topAnchor="4.0" />
+                                             </children>
+                                          </AnchorPane>
+                                       </top>
+                                    </BorderPane>
+                                 </center>
+                                 <right>
+                                    <AnchorPane prefHeight="505.0" prefWidth="383.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <Label layoutX="90.0" layoutY="14.0" prefHeight="40.0" prefWidth="170.0" text="Input Data" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="58.0" AnchorPane.topAnchor="14.0">
+                                             <font>
+                                                <Font size="28.0" />
+                                             </font>
+                                          </Label>
+                                          <Separator layoutX="8.0" layoutY="65.0" prefWidth="200.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="65.0" />
+                                          <GridPane prefHeight="296.0" prefWidth="323.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="90.0">
+                                             <children>
+                                                <GridPane prefHeight="13.0" prefWidth="228.0" GridPane.rowIndex="12">
+                                                   <children>
+                                                      <Button fx:id="saveStock" mnemonicParsing="false" prefHeight="25.0" prefWidth="128.0" text="Save" GridPane.columnIndex="1" />
+                                                   </children>
+                                                   <columnConstraints>
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="210.0" minWidth="10.0" prefWidth="198.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="161.0" minWidth="10.0" prefWidth="125.0" />
+                                                   </columnConstraints>
+                                                   <rowConstraints>
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                   </rowConstraints>
+                                                </GridPane>
+                                                <Label text="SKU" GridPane.rowIndex="2" />
+                                                <Label text="Date of Purchase" GridPane.rowIndex="4" />
+                                                <Label text="Quantity" GridPane.rowIndex="6" />
+                                                <Label text="Price per Unit" GridPane.rowIndex="8" />
+                                                <Label text="Batch Number" GridPane.rowIndex="10" />
+                                                <TextField fx:id="stockQuantity" GridPane.rowIndex="7" />
+                                                <TextField fx:id="stockPriceUnit" GridPane.rowIndex="9" />
+                                                <TextField fx:id="batchNumber" GridPane.rowIndex="11" />
+                                                <TextField fx:id="stockName" GridPane.rowIndex="3" />
+                                                <DatePicker fx:id="datePurchased" prefHeight="25.0" prefWidth="342.0" GridPane.rowIndex="5" />
+                                                <ComboBox fx:id="comboSupplierid" prefHeight="25.0" prefWidth="324.0" promptText="........Select Supplier........" GridPane.rowIndex="1" />
+                                                <Label prefHeight="17.0" prefWidth="330.0" text="Select Supplier" />
+                                             </children>
+                                             <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="332.0" minWidth="10.0" prefWidth="321.0" />
+                                             </columnConstraints>
+                                             <rowConstraints>
+                                                <RowConstraints maxHeight="127.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="127.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="127.0" minHeight="10.0" prefHeight="22.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="127.0" minHeight="10.0" prefHeight="34.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="127.0" minHeight="10.0" prefHeight="19.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="135.0" minHeight="10.0" prefHeight="37.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="135.0" minHeight="10.0" prefHeight="21.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="135.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="135.0" minHeight="10.0" prefHeight="21.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="135.0" minHeight="10.0" prefHeight="31.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="135.0" minHeight="10.0" prefHeight="27.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="135.0" minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="141.0" minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES" />
+                                             </rowConstraints>
+                                          </GridPane>
+                                       </children>
+                                    </AnchorPane>
+                                 </right>
+                              </BorderPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="stockingActionsTab" text="SKU Stocking Actions">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <AnchorPane layoutX="158.0" layoutY="14.0" prefHeight="41.0" prefWidth="728.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <TextField fx:id="stockActionsSearch" layoutX="112.0" layoutY="7.0" prefHeight="25.0" prefWidth="182.0" />
+                                    <Label layoutX="20.0" layoutY="11.0" prefHeight="17.0" prefWidth="70.0" text="Search" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="anchorPaneStockActions" layoutX="68.0" layoutY="41.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="545.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="41.0" />
+                              <SplitPane dividerPositions="0.5" layoutX="138.0" layoutY="41.0" prefHeight="160.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="41.0">
+                                <items>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                       <children>
+                                          <AnchorPane fx:id="anchorPaneStockingActinon" layoutX="31.0" layoutY="24.0" prefHeight="543.0" prefWidth="360.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <children>
+                                                <TableView fx:id="skuStockingActionsTV" prefHeight="543.0" prefWidth="360.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                   <columns>
+                                                      <TableColumn prefWidth="75.0" text="C1" />
+                                                      <TableColumn prefWidth="75.0" text="C2" />
+                                                   </columns>
+                                                </TableView>
+                                             </children>
+                                          </AnchorPane>
+                                       </children>
+                                    </AnchorPane>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                       <children>
+                                          <AnchorPane fx:id="anchorPaneActions" layoutX="62.0" layoutY="37.0" prefHeight="351.0" prefWidth="360.0" AnchorPane.bottomAnchor="155.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="37.0">
+                                             <children>
+                                                <TableView fx:id="StockingActionsTV" layoutX="1.0" prefHeight="343.0" prefWidth="359.0" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                   <columns>
+                                                      <TableColumn prefWidth="75.0" text="C1" />
+                                                      <TableColumn prefWidth="75.0" text="C2" />
+                                                   </columns>
+                                                </TableView>
+                                             </children>
+                                          </AnchorPane>
+                                          <Label fx:id="labelStockHistory" prefHeight="37.0" prefWidth="359.0" text="Label" textAlignment="CENTER" textFill="#0d0d0cd1" textOverrun="CLIP">
+                                             <font>
+                                                <Font name="Arial Black" size="24.0" />
+                                             </font>
+                                          </Label>
+                                          <SplitPane dividerPositions="0.5" layoutX="7.0" layoutY="401.0" orientation="VERTICAL" prefHeight="137.0" prefWidth="387.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-27.0" AnchorPane.topAnchor="401.0">
+                                            <items>
+                                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="65.0" prefWidth="374.0">
+                                                   <children>
+                                                      <Pane layoutX="14.0" layoutY="9.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="2.0">
+                                                         <children>
+                                                            <Label fx:id="labelTotalSold" layoutX="129.0" layoutY="6.0" prefHeight="30.0" prefWidth="112.0" text="Total Sold" AnchorPane.leftAnchor="136.0" AnchorPane.rightAnchor="110.0" />
+                                                            <Label fx:id="labelTotalStocked" layoutY="6.0" prefHeight="31.0" prefWidth="130.0" text="Total Stocked" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="225.0" />
+                                                            <Label fx:id="labelQuantityInStock" layoutX="241.0" layoutY="6.0" prefHeight="31.0" prefWidth="136.0" text="Current Stock" AnchorPane.bottomAnchor="19.0" AnchorPane.leftAnchor="262.0" AnchorPane.rightAnchor="0.0">
+                                                               <font>
+                                                                  <Font name="System Bold" size="9.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </children>
+                                                      </Pane>
+                                                   </children>
+                                                </AnchorPane>
+                                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                                   <children>
+                                                      <Pane layoutX="-2.0" layoutY="15.0" AnchorPane.leftAnchor="0.0">
+                                                         <children>
+                                                            <TextField fx:id="adjustQuantity" layoutX="74.0" layoutY="1.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="66.0" AnchorPane.leftAnchor="52.0" AnchorPane.rightAnchor="234.0">
+                                                               <font>
+                                                                  <Font name="System Bold Italic" size="11.0" />
+                                                               </font>
+                                                            </TextField>
+                                                            <Label prefHeight="23.0" prefWidth="73.0" text="Quantity" AnchorPane.leftAnchor="-2.0" AnchorPane.rightAnchor="304.0" />
+                                                         </children>
+                                                      </Pane>
+                                                      <Pane layoutX="144.0" layoutY="14.0" prefHeight="26.0" prefWidth="128.0" AnchorPane.leftAnchor="144.0" AnchorPane.rightAnchor="113.0">
+                                                         <children>
+                                                            <Label prefHeight="26.0" prefWidth="44.0" text="Price" AnchorPane.rightAnchor="162.0" />
+                                                            <TextField fx:id="adjustPrice" layoutX="46.0" prefHeight="25.0" prefWidth="72.0" AnchorPane.leftAnchor="206.0" AnchorPane.rightAnchor="81.0">
+                                                               <font>
+                                                                  <Font name="Arial" size="12.0" />
+                                                               </font>
+                                                            </TextField>
+                                                         </children>
+                                                      </Pane>
+                                                      <Pane layoutX="268.0" layoutY="13.0" prefHeight="22.0" prefWidth="117.0" AnchorPane.leftAnchor="268.0" AnchorPane.rightAnchor="0.0">
+                                                         <children>
+                                                            <Button fx:id="saveAdjust" layoutX="3.0" layoutY="1.0" mnemonicParsing="false" prefHeight="3.0" prefWidth="108.0" text="Udate" />
+                                                         </children>
+                                                      </Pane>
+                                                   </children>
+                                                </AnchorPane>
+                                            </items>
+                                          </SplitPane>
+                                       </children>
+                                    </AnchorPane>
+                                </items>
+                              </SplitPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="skuPOrderTab" text="Purchase Order">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <BorderPane prefHeight="664.0" prefWidth="728.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <center>
+                                    <BorderPane fx:id="borderpaneOrderWrapper1" prefHeight="586.0" prefWidth="400.0" style="-fx-border-color: grey;" BorderPane.alignment="CENTER">
+                                       <center>
+                                          <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #E6E7E9;" BorderPane.alignment="CENTER">
+                                             <children>
+                                                <TableView fx:id="skuOrdersTV" layoutX="21.0" layoutY="22.0" prefHeight="244.0" prefWidth="302.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                   <columns>
+                                                      <TableColumn prefWidth="75.0" text="C1" />
+                                                      <TableColumn prefWidth="75.0" text="C2" />
+                                                   </columns>
+                                                </TableView>
+                                             </children>
+                                          </AnchorPane>
+                                       </center>
+                                       <top>
+                                          <AnchorPane prefHeight="7.0" prefWidth="411.0" style="-fx-background-color: #E6E7E9;" BorderPane.alignment="CENTER_LEFT">
+                                             <children>
+                                                <TextField fx:id="orderSearch" layoutX="50.0" layoutY="16.0" prefHeight="25.0" prefWidth="177.0" AnchorPane.bottomAnchor="4.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="4.0" />
+                                                <Label layoutX="161.0" layoutY="11.0" text="Search" AnchorPane.bottomAnchor="4.0" AnchorPane.rightAnchor="222.0" AnchorPane.topAnchor="4.0" />
+                                             </children>
+                                          </AnchorPane>
+                                       </top>
+                                    </BorderPane>
+                                 </center>
+                                 <right>
+                                    <BorderPane fx:id="borderpaneOrderCartWrapper" minWidth="700.0" prefHeight="586.0" prefWidth="700.0" style="-fx-border-color: grey;" BorderPane.alignment="CENTER">
+                                       <bottom>
+                                          <AnchorPane prefHeight="83.0" prefWidth="698.0" BorderPane.alignment="CENTER">
+                                             <children>
+                                                <Label fx:id="salesVat1" layoutX="326.0" layoutY="14.0" prefHeight="17.0" prefWidth="73.0" />
+                                                <Label fx:id="totals1" layoutX="326.0" layoutY="61.0" prefHeight="17.0" prefWidth="73.0" />
+                                                <Button fx:id="saveOrder" layoutX="372.0" layoutY="33.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="94.0" style="-fx-background-color: green;" text="SAVE" />
+                                                <Button fx:id="cancelOrder" layoutX="262.0" layoutY="33.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="101.0" style="-fx-background-color: red;" text="CANCEL" />
+                                             </children>
+                                          </AnchorPane>
+                                       </bottom>
+                                       <center>
+                                          <TableView fx:id="skuOrderCart" prefHeight="320.0" prefWidth="698.0" BorderPane.alignment="CENTER_RIGHT">
+                                             <columns>
+                                                <TableColumn prefWidth="75.0" text="C1" />
+                                                <TableColumn prefWidth="75.0" text="C2" />
+                                             </columns>
+                                          </TableView>
+                                       </center>
+                                       <top>
+                                          <AnchorPane prefHeight="58.0" prefWidth="413.0" BorderPane.alignment="CENTER">
+                                             <children>
+                                                <Label layoutX="126.0" layoutY="20.0" text="ORDER BASKET" />
+                                                <Separator layoutX="54.0" layoutY="42.0" prefWidth="200.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+                                                <ComboBox fx:id="supplierCb" layoutX="324.0" layoutY="16.0" prefWidth="150.0" promptText="Select Supplier" />
+                                             </children>
+                                          </AnchorPane>
+                                       </top>
+                                    </BorderPane>
+                                 </right>
+                              </BorderPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="skuPInvoiceTab" text="Purchase Invoice">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <BorderPane prefHeight="664.0" prefWidth="728.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <center>
+                                    <BorderPane fx:id="borderpaneInvoiceWrapper1" prefHeight="586.0" prefWidth="400.0" style="-fx-border-color: grey;" BorderPane.alignment="CENTER">
+                                       <center>
+                                          <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #E6E7E9;" BorderPane.alignment="CENTER">
+                                             <children>
+                                                <TableView fx:id="skuSalesTV11" layoutX="14.0" layoutY="-14.0" prefHeight="244.0" prefWidth="302.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="-14.0" AnchorPane.topAnchor="-14.0">
+                                                   <columns>
+                                                      <TableColumn prefWidth="75.0" text="C1" />
+                                                      <TableColumn prefWidth="75.0" text="C2" />
+                                                   </columns>
+                                                </TableView>
+                                             </children>
+                                          </AnchorPane>
+                                       </center>
+                                       <top>
+                                          <AnchorPane prefHeight="7.0" prefWidth="411.0" style="-fx-background-color: #E6E7E9;" BorderPane.alignment="CENTER_LEFT">
+                                             <children>
+                                                <Label layoutX="161.0" layoutY="11.0" prefHeight="17.0" prefWidth="244.0" AnchorPane.bottomAnchor="4.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="4.0" />
+                                             </children>
+                                          </AnchorPane>
+                                       </top>
+                                    </BorderPane>
+                                 </center>
+                                 <right>
+                                    <BorderPane fx:id="borderpaneInvoiceCartWrapper1" minWidth="700.0" prefHeight="586.0" prefWidth="700.0" style="-fx-border-color: grey;" BorderPane.alignment="CENTER">
+                                       <bottom>
+                                          <AnchorPane prefHeight="219.0" prefWidth="698.0" BorderPane.alignment="CENTER">
+                                             <children>
+                                                <Separator layoutX="10.0" layoutY="98.0" prefWidth="200.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+                                                <Label fx:id="salesVat11" layoutX="326.0" layoutY="14.0" prefHeight="17.0" prefWidth="73.0" />
+                                                <Label fx:id="totals11" layoutX="326.0" layoutY="61.0" prefHeight="17.0" prefWidth="73.0" />
+                                                <Label layoutX="250.0" layoutY="14.0" prefHeight="17.0" prefWidth="52.0" text="        VAT" />
+                                                <Label layoutX="250.0" layoutY="61.0" prefHeight="17.0" prefWidth="56.0" text="  TOTALS" />
+                                                <Button fx:id="saveInvoice1" layoutX="375.0" layoutY="119.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="94.0" style="-fx-background-color: green;" text="SAVE" />
+                                                <Button fx:id="canceInvoice" layoutX="266.0" layoutY="119.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="101.0" style="-fx-background-color: red;" text="CANCEL" />
+                                                <TextField fx:id="invoiceVat_totals1" editable="false" layoutX="318.0" layoutY="10.0" text="0" />
+                                                <TextField fx:id="total_invoice" editable="false" layoutX="318.0" layoutY="57.0" text="0" />
+                                             </children>
+                                          </AnchorPane>
+                                       </bottom>
+                                       <center>
+                                          <TableView fx:id="skuInvoiceCart" prefHeight="283.0" prefWidth="698.0" BorderPane.alignment="CENTER_RIGHT">
+                                             <columns>
+                                                <TableColumn prefWidth="75.0" text="C1" />
+                                                <TableColumn prefWidth="75.0" text="C2" />
+                                             </columns>
+                                          </TableView>
+                                       </center>
+                                       <top>
+                                          <AnchorPane prefHeight="58.0" prefWidth="413.0" BorderPane.alignment="CENTER">
+                                             <children>
+                                                <Label layoutX="126.0" layoutY="20.0" text="PURCHASE INVOICE  BASKET" />
+                                                <Separator layoutX="54.0" layoutY="42.0" prefWidth="200.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+                                                <ComboBox fx:id="purchaseCb" layoutX="315.0" layoutY="16.0" prefWidth="150.0" promptText="---OrderNo----" />
+                                             </children>
+                                          </AnchorPane>
+                                       </top>
+                                    </BorderPane>
+                                 </right>
+                              </BorderPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+               </tabs>
+            </TabPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

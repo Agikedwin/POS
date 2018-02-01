@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.solutions.pos.integrator.controllers.DashBoard">
+   <children>
+      <BorderPane fx:id="borderPaneHomeScreen" layoutX="123.0" layoutY="128.0" prefHeight="550.0" prefWidth="900.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <AnchorPane prefHeight="79.0" prefWidth="900.0" style="-fx-background-color: #414143;" BorderPane.alignment="CENTER">
+               <children>
+                  <Pane prefHeight="10.0" prefWidth="200.0" style="-fx-background-color: #FF9500;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+               </children>
+            </AnchorPane>
+         </top>
+         <left>
+            <AnchorPane prefHeight="471.0" prefWidth="181.0" style="-fx-background-color: #424F5A;" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="homeButton" layoutX="7.0" layoutY="75.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="169.0" text="Home" />
+                  <Button fx:id="businessDetails" layoutX="8.0" layoutY="150.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="167.0" text="  Business Details" />
+                  <Button fx:id="businessLogoButton" layoutX="7.0" layoutY="211.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="172.0" text="Business Logo" />
+               </children>
+            </AnchorPane>
+         </left>
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

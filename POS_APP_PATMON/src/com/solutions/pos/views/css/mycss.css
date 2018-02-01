@@ -1,0 +1,168 @@
+
+
+.button {
+    //-fx-padding: 5 22 5 22;   
+    //-fx-border-color: #e2e2e2;
+    -fx-border-width: 2;
+    -fx-background-radius: 0;
+    -fx-background-color:  #424F5A;
+    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    -fx-font-size: 10pt;
+    -fx-text-fill: #d8d8d8;
+    //-fx-background-insets: 0 0 0 0, 0, 1, 2;
+    -fx-text-alignment: left;
+}
+
+.button:hover {
+    -fx-background-color: #3a3a3a;
+    -fx-border-color:  transparent  transparent transparent #FF9500;
+    -fx-background-insets: 0 0 0 0, 0, 1, 2;
+}
+
+.button:pressed, .button:default:hover:pressed {
+    -fx-background-color: white;
+    -fx-text-fill: #1d1d1d;
+
+    /*   -fx-background-color: #3a3a3a;
+       -fx-border-color:  transparent  transparent transparent #FF9500;*/
+}
+
+.button:focused {
+    /*    -fx-border-color: white, white;
+        -fx-border-width: 1, 1;
+        -fx-border-style: solid, segments(1, 1);
+        -fx-border-radius: 0, 0;
+        -fx-border-insets: 1 1 1 1, 0;*/
+    -fx-background-color: #3a3a3a;
+    -fx-border-color:  transparent  transparent transparent #FF9500;
+}
+
+.button:disabled, .button:default:disabled {
+    -fx-opacity: 0.4;
+    -fx-background-color: #1d1d1d;
+    -fx-text-fill: white;
+}
+
+.button:default {
+    -fx-background-color: -fx-focus-color;
+    -fx-text-fill: #ffffff;
+}
+
+.button:default:hover {
+    -fx-background-color: derive(-fx-focus-color,30%);
+}
+/*******************************************************************************
+ *                                                                             *
+ * TableView                                                                   *
+ *                                                                             *
+ ******************************************************************************/
+
+.table-view {
+    -fx-skin: "com.sun.javafx.scene.control.skin.TableViewSkin";
+    -fx-background-color: -fx-box-border, -fx-control-inner-background;
+    -fx-padding: 1; 
+    -fx-table-header-border-color: #959595;
+    -fx-table-cell-border-color: #bbbbbb;
+}
+.table-row-cell:selected {
+    //-fx-opacity: -fx-disabled-opacity;
+    -fx-background-color: #FF9500;
+}
+/*.table-view:row-selection .table-row-cell:filled:hover { 
+    -fx-background-color: #FF9500;
+}*/
+/*.table-row-cell:hover {
+    //-fx-opacity: -fx-disabled-opacity;
+    -fx-background-color:   #424F5A;
+    -fx-text-fill: white;
+}*/
+.table-row-cell:filled:hover{ 
+    -fx-background-color:   grey;
+    //-fx-background-insets: 0, 0 0 1 0;
+    //-fx-text-color: white;
+}
+.tab-pane {
+    // -fx-skin: "com.sun.javafx.scene.control.skin.TabPaneSkin";
+    /* -fx-tab-min-width: 4.583em;  55 */
+    /* -fx-tab-max-width: 4.583em; 55 */
+    -fx-tab-min-height: 2em; /* 24 */
+    -fx-tab-max-height: 2em; /* 24 */
+    -fx-background-color: white;
+    -fx-background-insets: 0 0 0 0, 0, 1, 2;
+}
+
+.tab .tab-label {
+    // -fx-skin: "com.sun.javafx.scene.control.skin.LabelSkin";
+    -fx-background-color: transparent;    
+    -fx-alignment: CENTER;
+    -fx-text-fill: -fx-text-base-color;
+    // -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+}
+/*
+.tab *.tab-label Text {
+    -fx-effect: dropshadow(two-pass-box , rgba(255, 255, 255, 0.4), 1, 0.0 , 0, 1);
+}*/
+
+.tab-content-area {
+    -fx-background-color: white;
+    -fx-padding: 0.0em; /* 0 */
+    /* -fx-opacity: -fx-disabled-opacity;*/
+}
+
+.tab {
+    -fx-background-color: white;
+    -fx-background-insets: 0, 1 1 0 1;
+    -fx-background-radius: 5 5 0 0, 4 4 0 0;
+    -fx-background-insets: 0 0 0 0, 0, 1, 2;
+    -fx-border-color: transparent transparent grey transparent;
+    -fx-font-size: 11pt;
+}
+.tab:hover {
+    -fx-background-color:   #424F5A;
+}
+.tab .tab-label:hover {
+    // -fx-skin: "com.sun.javafx.scene.control.skin.LabelSkin";
+    /*    -fx-background-color: transparent;    
+        -fx-alignment: CENTER;
+        -fx-text-fill: -fx-text-base-color;*/
+    // -fx-background-color:   #424F5A;
+    -fx-text-fill: white;
+}
+/*.tab:selected.label:hover{
+    -fx-text-fill: black;
+}*/
+
+.tab:selected {
+    /*    -fx-background-color: white;
+    
+        -fx-background-color: -fx-tab-border-color, -fx-inner-border, -fx-body-color;
+        -fx-background-radius: 5 5 0 0, 4 4 0 0, 3 3 0 0;
+        -fx-background-insets: 0, 1 1 0 1, 2 2 0 2;*/
+    // -fx-background-color: #FBFBFB;
+    //-fx-background-insets: 0, 1 1 0 1;
+    -fx-background-radius: 5 5 0 0, 4 4 0 0;
+    -fx-border-color: transparent transparent #FF9500 transparent;
+    // -fx-border-color: transparent  grey #FF9500 transparent;
+    -fx-border-width: 3;
+    //-fx-background-color: white;
+}
+/*.tab.tab-header-area.tab-header-background{
+    -fx-background-color: white;
+}*/
+.tab-pane *.tab-header-background {
+    // -fx-background-color: -fx-outer-border, -fx-inner-border, derive(-fx-color, -20%);
+    -fx-background-color: white;
+    -fx-border-color: grey transparent grey transparent;
+    // -fx-effect: innershadow(two-pass-box , rgba(0,0,0,0.6) , 4, 0.0 , 0 , 0);
+}
+.tab-pane .headers-region {
+    // -fx-effect: dropshadow(two-pass-box , rgba(0,0,0,0.6) , 4, 0.0 , 0, 0);
+    -fx-background-color: white;
+}
+.text-field{
+        //-fx-border-style: solid;
+        -fx-border-color: gray;
+    //-fx-border-insets: 0;
+    //-fx-border-width: 2px;
+   // -fx-border-color: lightgray lightgray lightgray lightgray;
+}

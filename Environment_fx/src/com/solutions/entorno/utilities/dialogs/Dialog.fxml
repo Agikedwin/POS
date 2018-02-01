@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="390.0" style="-fx-border-color: gray;" stylesheets="@../views/css/JMetroLightTheme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.solutions.entorno.utilities.dialogs.DialogController">
+   <children>
+      <ImageView fx:id="ivIcon" fitHeight="116.0" fitWidth="99.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@../resources/dialog/success.png" />
+         </image>
+      </ImageView>
+      <Separator layoutX="109.0" layoutY="1.0" orientation="VERTICAL" prefHeight="93.0" prefWidth="6.0" AnchorPane.bottomAnchor="1.0" AnchorPane.topAnchor="1.0" />
+      <Label fx:id="lblMessage" layoutX="126.0" layoutY="7.0" prefHeight="84.0" prefWidth="224.0" text="Label" wrapText="true" />
+      <ImageView fx:id="ivClose" fitHeight="30.0" fitWidth="42.0" layoutX="357.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@../resources/dialog/close.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

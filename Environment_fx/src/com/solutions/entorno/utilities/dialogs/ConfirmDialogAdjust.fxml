@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="95.0" prefWidth="390.0" style="-fx-border-color: gray;" stylesheets="@../views/css/JMetroLightTheme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.solutions.entorno.utilities.dialogs.ConfirmDialogAdjustController">
+   <children>
+      <ImageView fx:id="ivIcon" fitHeight="95.0" fitWidth="79.0" layoutX="16.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="-6.0" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="6.0">
+         <image>
+            <Image url="@../resources/dialog/info.png" />
+         </image>
+      </ImageView>
+      <Separator layoutX="109.0" layoutY="3.0" orientation="VERTICAL" prefHeight="106.0" prefWidth="2.0" AnchorPane.bottomAnchor="2.0" AnchorPane.topAnchor="2.0" />
+      <ImageView fx:id="ivClose" fitHeight="30.0" fitWidth="42.0" layoutX="357.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@../resources/dialog/close.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnOk" layoutX="241.0" layoutY="30.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="137.0" style="-fx-padding: 2 2 2 2; -fx-background-color: green;" text="GIVE DISCOUNT" />
+      <Button fx:id="btnCancel" layoutX="122.0" layoutY="32.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="104.0" style="-fx-padding: 2 2 2 2; -fx-background-color: #FF9500;" text="INFLATE" />
+   </children>
+</AnchorPane>

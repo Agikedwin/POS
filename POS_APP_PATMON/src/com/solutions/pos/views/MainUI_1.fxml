@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="465.0" prefWidth="629.0" stylesheets="@css/JMetroLightTheme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.solutions.pos.controllers.MainUIController">
+   <children>
+      <AnchorPane layoutX="14.0" layoutY="82.0" prefHeight="383.0" prefWidth="218.0" style="-fx-background-color: #424F5A;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="82.0">
+         <children>
+            <VBox prefHeight="232.0" prefWidth="202.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="1.0">
+               <children>
+                  <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" mouseTransparent="true" prefHeight="45.0" prefWidth="217.0" style="-fx-background-color: gray; -fx-padding: 5 5 5 5;" text="MENU" textAlignment="RIGHT" textFill="WHITE">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="linkSalesOperations" alignment="CENTER_RIGHT" contentDisplay="RIGHT" graphicTextGap="0.0" layoutX="8.0" layoutY="81.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="220.0" style="-fx-padding: 5 5 5 0;" text="POS SALES" textAlignment="RIGHT" />
+                  <Separator layoutX="6.0" layoutY="123.0" prefHeight="3.0" prefWidth="185.0" />
+                  <Button fx:id="linkStockOperation" alignment="CENTER_RIGHT" contentDisplay="RIGHT" graphicTextGap="0.0" layoutX="8.0" layoutY="135.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="214.0" style="-fx-padding: 5 5 5 0;" text="POS STOCK" textAlignment="RIGHT" />
+                  <Separator layoutX="8.0" layoutY="176.0" prefHeight="3.0" prefWidth="185.0" />
+                  <Button fx:id="linksetup" alignment="CENTER_RIGHT" contentDisplay="RIGHT" graphicTextGap="0.0" layoutX="7.0" layoutY="205.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="220.0" style="-fx-padding: 5 5 5 0;" text="SETUP" />
+                  <Separator layoutX="-1.0" layoutY="246.0" prefHeight="3.0" prefWidth="185.0" />
+                  <Button fx:id="linkExpense" alignment="CENTER_RIGHT" contentDisplay="RIGHT" graphicTextGap="0.0" layoutX="9.0" layoutY="255.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="217.0" style="-fx-padding: 5 5 5 0;" text="POS EXPENSE" textAlignment="RIGHT" />
+                  <Separator layoutX="6.0" layoutY="297.0" prefHeight="3.0" prefWidth="185.0" />
+                  <Button fx:id="report" alignment="CENTER_RIGHT" contentDisplay="RIGHT" graphicTextGap="0.0" layoutY="312.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="220.0" style="-fx-padding: 5 5 5 0;" text="REPORT" />
+               </children>
+            </VBox>
+         </children></AnchorPane>
+      <AnchorPane fx:id="anchorArea" layoutX="221.0" layoutY="82.0" prefHeight="383.0" prefWidth="408.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="221.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="82.0" />
+      <AnchorPane prefHeight="90.0" prefWidth="600.0" style="-fx-background-color: #414143;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane layoutX="14.0" layoutY="126.0" prefHeight="5.0" prefWidth="1000.0" style="-fx-background-color: #FF9500;" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+            <Pane layoutX="866.0" prefHeight="84.0" prefWidth="133.0" style="-fx-border-color: transparent transparent transparent gray;" AnchorPane.rightAnchor="30.0">
+               <children>
+                  <Label fx:id="lblDate" contentDisplay="CENTER" layoutX="18.0" layoutY="14.0" prefHeight="17.0" prefWidth="115.0" style="-fx-text-fill: #FF9500;" text="SAT 20" textFill="WHITE" />
+                  <Label fx:id="lblTime" layoutX="17.0" layoutY="42.0" prefHeight="34.0" prefWidth="117.0" style="-fx-text-fill: #FF9500;" styleClass="lable-time" text="12 : 44 PM" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Separator layoutX="16.0" layoutY="41.0" prefHeight="0.0" prefWidth="114.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="129.0" prefHeight="84.0" prefWidth="133.0" style="-fx-border-color: transparent transparent transparent GRAY;" AnchorPane.leftAnchor="129.0">
+               <children>
+                  <Label fx:id="lbl" contentDisplay="CENTER" layoutX="17.0" layoutY="18.0" prefHeight="22.0" prefWidth="116.0" text="USER" textFill="WHITE" />
+                  <Label fx:id="lblUser" contentDisplay="CENTER" layoutX="18.0" layoutY="42.0" prefHeight="36.0" prefWidth="115.0" style="-fx-text-fill: #FF9500;" text="MARK OLOO" textFill="WHITE" />
+                  <Separator layoutX="8.0" layoutY="41.0" prefHeight="0.0" prefWidth="119.0" />
+               </children>
+            </Pane>
+            <Label fx:id="lblBusiness" alignment="CENTER" layoutX="276.0" prefHeight="87.0" prefWidth="512.0" styleClass="lable-logo" text="Litein Drappers and Uniforms" AnchorPane.leftAnchor="270.0" AnchorPane.rightAnchor="218.0">
+               <effect>
+                  <Bloom />
+               </effect>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

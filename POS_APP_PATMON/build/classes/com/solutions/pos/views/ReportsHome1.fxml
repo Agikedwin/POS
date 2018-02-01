@@ -1,0 +1,542 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="615.0" prefWidth="941.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.solutions.pos.controllers.ReportsHomeController">
+   <children>
+      <BorderPane layoutX="10.0" layoutY="10.0" prefHeight="555.0" prefWidth="728.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <TabPane fx:id="reportsTabPane" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+               <tabs>
+                  <Tab fx:id="dailySKUSalesReportTab" text="Daily SKU Sales">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <BorderPane prefHeight="296.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <bottom>
+                                    <AnchorPane prefHeight="81.0" prefWidth="728.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <Button fx:id="generateDailySKUSalesReport" layoutX="791.0" layoutY="28.0" mnemonicParsing="false" text="Generate PDF Report" AnchorPane.rightAnchor="22.0" />
+                                          <Label layoutX="22.0" layoutY="24.0" prefHeight="17.0" prefWidth="90.0" text="TOTAL SALES" />
+                                          <TextField fx:id="dailySkuSalesTotals" editable="false" layoutX="124.0" layoutY="20.0" prefHeight="25.0" prefWidth="124.0" />
+                                          <Label layoutX="265.0" layoutY="24.0" prefHeight="17.0" prefWidth="82.0" text="TOTAL VAT" />
+                                          <TextField fx:id="dailySKUVatTotal" editable="false" layoutX="347.0" layoutY="20.0" />
+                                          <TextField fx:id="profitDailySales" layoutX="627.0" layoutY="29.0" />
+                                          <Label layoutX="534.0" layoutY="27.0" prefHeight="27.0" prefWidth="83.0" text="PROFIT" />
+                                       </children>
+                                    </AnchorPane>
+                                 </bottom>
+                                 <center>
+                                    <BorderPane fx:id="borderpaneDailySalesWrapper1" prefHeight="241.0" prefWidth="276.0" BorderPane.alignment="CENTER">
+                                       <center>
+                                          <TableView fx:id="dailySalesReport1" prefHeight="472.0" prefWidth="374.0" BorderPane.alignment="CENTER">
+                                             <columns>
+                                                <TableColumn prefWidth="75.0" text="C1" />
+                                                <TableColumn prefWidth="75.0" text="C2" />
+                                             </columns>
+                                          </TableView>
+                                       </center>
+                                       <top>
+                                          <AnchorPane prefHeight="24.0" prefWidth="475.0" style="-fx-background-color: #EBEBEB;" BorderPane.alignment="CENTER">
+                                             <children>
+                                                <DatePicker fx:id="dailySalesDate1" editable="false" layoutX="113.0" layoutY="1.0" prefHeight="25.0" prefWidth="190.0" />
+                                                <Label layoutX="33.0" layoutY="5.0" text="Select Date" />
+                                                <Button fx:id="processDailySkuReport" layoutX="644.0" layoutY="1.0" mnemonicParsing="false" text="Process" />
+                                                <ComboBox fx:id="dailySku" layoutX="326.0" layoutY="1.0" prefHeight="25.0" prefWidth="204.0" promptText="--- Select SKU ---" />
+                                                <ComboBox fx:id="userSkus" layoutX="536.0" layoutY="1.0" prefHeight="25.0" prefWidth="100.0" promptText="--User--" />
+                                             </children>
+                                          </AnchorPane>
+                                       </top>
+                                    </BorderPane>
+                                 </center>
+                              </BorderPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="periodicSalesReport" text="Periodic Sales Report">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <BorderPane prefHeight="296.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <bottom>
+                                    <AnchorPane prefHeight="81.0" prefWidth="728.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <Button fx:id="generatePeriodicSalesReport" layoutX="752.0" layoutY="29.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="189.0" text="Generate PDF Report" AnchorPane.rightAnchor="0.0" />
+                                          <TextField fx:id="periodicSKUVatTotal" editable="false" layoutX="341.0" layoutY="29.0" prefHeight="25.0" prefWidth="132.0" />
+                                          <Label layoutX="262.0" layoutY="32.0" prefHeight="17.0" prefWidth="79.0" text="TOTAL VAT" />
+                                          <TextField fx:id="periodicSkuSalesTotals" editable="false" layoutX="123.0" layoutY="29.0" prefHeight="25.0" prefWidth="124.0" />
+                                          <Label layoutX="28.0" layoutY="32.0" prefHeight="17.0" prefWidth="90.0" text="TOTAL SALES" />
+                                          <Label layoutX="498.0" layoutY="33.0" prefHeight="22.0" prefWidth="75.0" text="PROIFT" />
+                                          <TextField fx:id="profitPeriodicSales" layoutX="565.0" layoutY="29.0" prefHeight="25.0" prefWidth="136.0" />
+                                       </children>
+                                    </AnchorPane>
+                                 </bottom>
+                                 <center>
+                                    <BorderPane fx:id="borderpaneAllSalesWrapper" prefHeight="241.0" prefWidth="276.0" BorderPane.alignment="CENTER">
+                                       <center>
+                                          <TableView fx:id="allSalesReportTable" prefHeight="472.0" prefWidth="374.0" BorderPane.alignment="CENTER">
+                                             <columns>
+                                                <TableColumn prefWidth="75.0" text="C1" />
+                                                <TableColumn prefWidth="75.0" text="C2" />
+                                             </columns>
+                                          </TableView>
+                                       </center>
+                                       <top>
+                                          <AnchorPane prefHeight="24.0" prefWidth="475.0" style="-fx-background-color: #EBEBEB;" BorderPane.alignment="CENTER">
+                                             <children>
+                                                <Label layoutY="8.0" prefHeight="17.0" prefWidth="92.0" text="Select" />
+                                                <DatePicker fx:id="fromDate" editable="false" layoutX="128.0" layoutY="4.0" prefHeight="25.0" prefWidth="86.0" promptText="FROM" />
+                                                <DatePicker fx:id="toDate" editable="false" layoutX="257.0" layoutY="2.0" prefHeight="25.0" prefWidth="87.0" promptText="TO" />
+                                                <Button fx:id="processAllSales" layoutX="542.0" layoutY="3.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="131.0" text="PROCESS" />
+                                                <ComboBox fx:id="comboAllSalesReport" layoutX="364.0" layoutY="4.0" prefWidth="150.0" />
+                                             </children>
+                                          </AnchorPane>
+                                       </top>
+                                    </BorderPane>
+                                 </center>
+                              </BorderPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="priceListTab" text="Price List">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <BorderPane prefHeight="296.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <bottom>
+                                    <AnchorPane prefHeight="81.0" prefWidth="728.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <Button fx:id="printPriceList" layoutX="557.0" layoutY="28.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="248.0" text="Generate PDF Report" AnchorPane.rightAnchor="34.0" />
+                                       </children>
+                                    </AnchorPane>
+                                 </bottom>
+                                 <center>
+                                    <BorderPane fx:id="borderpanePriceListWrapper" prefHeight="241.0" prefWidth="276.0" BorderPane.alignment="CENTER">
+                                       <center>
+                                          <TableView fx:id="tableItemsPriceList" prefHeight="472.0" prefWidth="374.0" BorderPane.alignment="CENTER">
+                                             <columns>
+                                                <TableColumn prefWidth="75.0" text="C1" />
+                                                <TableColumn prefWidth="75.0" text="C2" />
+                                             </columns>
+                                          </TableView>
+                                       </center>
+                                       <top>
+                                          <AnchorPane prefHeight="24.0" prefWidth="475.0" style="-fx-background-color: #EBEBEB;" BorderPane.alignment="CENTER">
+                                             <children>
+                                                <Label layoutX="87.0" layoutY="4.0" prefHeight="17.0" prefWidth="157.0" text="Sort by" />
+                                                <ComboBox fx:id="comboItemsPriceList" layoutX="196.0" prefHeight="25.0" prefWidth="231.0" promptText="..............Select Category........" />
+                                             </children>
+                                          </AnchorPane>
+                                       </top>
+                                    </BorderPane>
+                                 </center>
+                              </BorderPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="registeredItems" text="Registered SKUs">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <BorderPane prefHeight="296.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <bottom>
+                                    <AnchorPane prefHeight="81.0" prefWidth="728.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <Button fx:id="printRegisteredItems" layoutX="557.0" layoutY="28.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="272.0" text="Generate PDF Report" AnchorPane.rightAnchor="10.0" />
+                                       </children>
+                                    </AnchorPane>
+                                 </bottom>
+                                 <center>
+                                    <BorderPane fx:id="borderpaneRegItemsWrapper2" prefHeight="241.0" prefWidth="276.0" BorderPane.alignment="CENTER">
+                                       <center>
+                                          <TableView fx:id="tableRegisteredItems" prefHeight="472.0" prefWidth="374.0" BorderPane.alignment="CENTER">
+                                             <columns>
+                                                <TableColumn prefWidth="75.0" text="C1" />
+                                                <TableColumn prefWidth="75.0" text="C2" />
+                                             </columns>
+                                          </TableView>
+                                       </center>
+                                       <top>
+                                          <AnchorPane prefHeight="24.0" prefWidth="475.0" style="-fx-background-color: #EBEBEB;" BorderPane.alignment="CENTER">
+                                             <children>
+                                                <Label layoutX="57.0" layoutY="8.0" prefHeight="17.0" prefWidth="136.0" text="Select Item Category" />
+                                                <ComboBox fx:id="comboSelectCategory" layoutX="214.0" layoutY="4.0" prefHeight="25.0" prefWidth="215.0" promptText="Select Category" />
+                                             </children>
+                                          </AnchorPane>
+                                       </top>
+                                    </BorderPane>
+                                 </center>
+                              </BorderPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="dailySalesReportTab" text="Daily Sales Report">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <BorderPane prefHeight="296.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <bottom>
+                                    <AnchorPane prefHeight="81.0" prefWidth="728.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <Button fx:id="generateDailySalesReport" layoutX="836.0" layoutY="27.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="189.0" text="Generate PDF Report" AnchorPane.rightAnchor="40.0" />
+                                          <Label layoutX="24.0" layoutY="28.0" prefHeight="25.0" prefWidth="103.0" text="TOTAL  AMOUNT" />
+                                          <TextField fx:id="txfTotalSales" editable="false" layoutX="138.0" layoutY="28.0" prefHeight="25.0" prefWidth="122.0" />
+                                          <TextField fx:id="txfTotalVat" layoutX="339.0" layoutY="27.0" prefHeight="25.0" prefWidth="100.0" />
+                                          <Label layoutX="290.0" layoutY="27.0" prefHeight="27.0" prefWidth="55.0" text="VAT" />
+                                          <Label layoutX="463.0" layoutY="32.0" prefHeight="17.0" prefWidth="77.0" text="PROFIT" />
+                                          <TextField fx:id="profitSalesReport" layoutX="548.0" layoutY="28.0" prefHeight="25.0" prefWidth="122.0" />
+                                       </children>
+                                    </AnchorPane>
+                                 </bottom>
+                                 <center>
+                                    <BorderPane fx:id="borderpaneDailySalesWrapper" prefHeight="241.0" prefWidth="276.0" BorderPane.alignment="CENTER">
+                                       <center>
+                                          <TableView fx:id="dailySalesReportTV" prefHeight="472.0" prefWidth="374.0" BorderPane.alignment="CENTER">
+                                             <columns>
+                                                <TableColumn prefWidth="75.0" text="C1" />
+                                                <TableColumn prefWidth="75.0" text="C2" />
+                                             </columns>
+                                          </TableView>
+                                       </center>
+                                       <top>
+                                          <AnchorPane prefHeight="24.0" prefWidth="475.0" style="-fx-background-color: #EBEBEB;" BorderPane.alignment="CENTER">
+                                             <children>
+                                                <DatePicker fx:id="dailySalesdate" editable="false" layoutX="113.0" layoutY="1.0" prefHeight="25.0" prefWidth="190.0" />
+                                                <Label layoutX="33.0" layoutY="5.0" text="Select Date" />
+                                                <Button fx:id="processDailyReport" layoutX="553.0" layoutY="1.0" mnemonicParsing="false" text="Process" />
+                                                <ComboBox fx:id="cbdailyUser" layoutX="330.0" layoutY="1.0" prefHeight="25.0" prefWidth="204.0" promptText="--- Select User ---" />
+                                             </children>
+                                          </AnchorPane>
+                                       </top>
+                                    </BorderPane>
+                                 </center>
+                              </BorderPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="stockreportTab" text="Stocking Report">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <BorderPane prefHeight="296.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <bottom>
+                                    <AnchorPane prefHeight="81.0" prefWidth="728.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <Button fx:id="buttonDailySalesReport" layoutX="557.0" layoutY="28.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="233.0" text="Generate PDF Report" AnchorPane.rightAnchor="106.0" />
+                                       </children>
+                                    </AnchorPane>
+                                 </bottom>
+                                 <center>
+                                    <BorderPane fx:id="borderpaneStockWrapper" prefHeight="241.0" prefWidth="276.0" BorderPane.alignment="CENTER">
+                                       <center>
+                                          <TableView fx:id="tableStockItems" prefHeight="472.0" prefWidth="374.0" BorderPane.alignment="CENTER">
+                                             <columns>
+                                                <TableColumn prefWidth="75.0" text="C1" />
+                                                <TableColumn prefWidth="75.0" text="C2" />
+                                             </columns>
+                                          </TableView>
+                                       </center>
+                                       <top>
+                                          <AnchorPane prefHeight="24.0" prefWidth="475.0" style="-fx-background-color: #EBEBEB;" BorderPane.alignment="CENTER">
+                                             <children>
+                                                <Label layoutX="57.0" layoutY="8.0" prefHeight="17.0" prefWidth="136.0" text="Select Item Category" />
+                                                <ComboBox fx:id="comboSelectCategory1" layoutX="214.0" layoutY="4.0" prefHeight="25.0" prefWidth="215.0" promptText="Select Category" />
+                                                <Button fx:id="btnProcessStockReport" layoutX="449.0" layoutY="2.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="186.0" text="PROCESS" />
+                                             </children>
+                                          </AnchorPane>
+                                       </top>
+                                    </BorderPane>
+                                 </center>
+                              </BorderPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="currentStockreportTab" text="Current Stock Report">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <BorderPane prefHeight="296.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <bottom>
+                                    <AnchorPane prefHeight="81.0" prefWidth="728.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <Button fx:id="buttonDailySalesReport1" layoutX="557.0" layoutY="28.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="217.0" text="Generate PDF Report" AnchorPane.rightAnchor="106.0" />
+                                          <Label layoutX="14.0" layoutY="32.0" prefHeight="17.0" prefWidth="51.0" text="Total" />
+                                          <Label layoutX="212.0" layoutY="32.0" prefHeight="17.0" prefWidth="34.0" text="VAT" />
+                                          <TextField fx:id="currentStockTotal" editable="false" layoutX="65.0" layoutY="28.0" prefHeight="25.0" prefWidth="128.0">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </TextField>
+                                          <TextField fx:id="currentStockVAT" editable="false" layoutX="257.0" layoutY="28.0" prefHeight="25.0" prefWidth="127.0">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </TextField>
+                                          <TextField fx:id="currentStockNet" editable="false" layoutX="471.0" layoutY="28.0" prefHeight="25.0" prefWidth="117.0">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </TextField>
+                                          <Label layoutX="399.0" layoutY="32.0" prefHeight="17.0" prefWidth="65.0" text="NET" />
+                                       </children>
+                                    </AnchorPane>
+                                 </bottom>
+                                 <center>
+                                    <BorderPane fx:id="borderpaneStockWrapper1" prefHeight="241.0" prefWidth="276.0" BorderPane.alignment="CENTER">
+                                       <center>
+                                          <TableView fx:id="tableCurrentStockItems" prefHeight="472.0" prefWidth="374.0" BorderPane.alignment="CENTER">
+                                             <columns>
+                                                <TableColumn prefWidth="75.0" text="C1" />
+                                                <TableColumn prefWidth="75.0" text="C2" />
+                                             </columns>
+                                          </TableView>
+                                       </center>
+                                       <top>
+                                          <AnchorPane prefHeight="24.0" prefWidth="475.0" style="-fx-background-color: #EBEBEB;" BorderPane.alignment="CENTER">
+                                             <children>
+                                                <Label layoutX="57.0" layoutY="8.0" prefHeight="17.0" prefWidth="136.0" text="Search " />
+                                                <TextField fx:id="stockSearch" layoutX="165.0" layoutY="4.0" prefHeight="25.0" prefWidth="168.0" />
+                                                <Button fx:id="processCurrentStockReport" layoutX="585.0" layoutY="2.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="126.0" text="PROCESS" />
+                                             </children>
+                                          </AnchorPane>
+                                       </top>
+                                    </BorderPane>
+                                 </center>
+                              </BorderPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="quotationReportTab" text="Quotation">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <BorderPane prefHeight="296.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <bottom>
+                                    <AnchorPane prefHeight="81.0" prefWidth="728.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <Label layoutX="473.0" layoutY="24.0" text="Report Type" AnchorPane.rightAnchor="305.0" />
+                                          <ComboBox layoutX="564.0" layoutY="20.0" prefWidth="150.0" AnchorPane.rightAnchor="129.0" />
+                                          <Button layoutX="757.0" layoutY="20.0" mnemonicParsing="false" text="Generate" AnchorPane.rightAnchor="21.0" />
+                                          <Label layoutX="23.0" layoutY="20.0" prefHeight="17.0" prefWidth="73.0" text="TOTAL" />
+                                          <TextField fx:id="totalQuotation" editable="false" layoutX="76.0" layoutY="20.0" prefHeight="25.0" prefWidth="127.0" />
+                                          <Label layoutX="215.0" layoutY="24.0" text="TOTAL VAT:" />
+                                          <TextField fx:id="totalVatQuotation" editable="false" layoutX="293.0" layoutY="20.0" />
+                                       </children>
+                                    </AnchorPane>
+                                 </bottom>
+                                 <center>
+                                    <BorderPane fx:id="borderpaneQuatationWrapper" prefHeight="241.0" prefWidth="276.0" BorderPane.alignment="CENTER">
+                                       <center>
+                                          <TableView fx:id="tableviewQuatationReports" prefHeight="472.0" prefWidth="374.0" BorderPane.alignment="CENTER">
+                                             <columns>
+                                                <TableColumn prefWidth="75.0" text="C1" />
+                                                <TableColumn prefWidth="75.0" text="C2" />
+                                             </columns>
+                                          </TableView>
+                                       </center>
+                                       <top>
+                                          <AnchorPane prefHeight="24.0" prefWidth="475.0" style="-fx-background-color: #EBEBEB;" BorderPane.alignment="CENTER">
+                                             <children>
+                                                <DatePicker fx:id="DatefromQuotation" layoutX="78.0" layoutY="1.0" />
+                                                <DatePicker fx:id="DatetoQuotation" layoutX="315.0" layoutY="1.0" />
+                                                <Label layoutX="29.0" layoutY="7.0" prefHeight="17.0" prefWidth="40.0" text="FROM" />
+                                                <Label layoutX="274.0" layoutY="5.0" text="TO" />
+                                                <ComboBox fx:id="customerQuotation" layoutX="535.0" layoutY="2.0" prefHeight="25.0" prefWidth="167.0" promptText="--- Select Customer ---" />
+                                                <Button fx:id="processCustomerQuotation" layoutX="721.0" layoutY="2.0" mnemonicParsing="false" text="Process" />
+                                             </children>
+                                          </AnchorPane>
+                                       </top>
+                                    </BorderPane>
+                                 </center>
+                              </BorderPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="purchaseOrderReport" text="Purchase Order ">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <BorderPane prefHeight="296.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <bottom>
+                                    <AnchorPane prefHeight="81.0" prefWidth="728.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <Label layoutX="473.0" layoutY="24.0" text="Report Type" AnchorPane.rightAnchor="305.0" />
+                                          <ComboBox layoutX="564.0" layoutY="20.0" prefWidth="150.0" AnchorPane.rightAnchor="129.0" />
+                                          <Button layoutX="757.0" layoutY="20.0" mnemonicParsing="false" text="Generate" AnchorPane.rightAnchor="21.0" />
+                                       </children>
+                                    </AnchorPane>
+                                 </bottom>
+                                 <center>
+                                    <BorderPane fx:id="borderpanepOrderWrapper" prefHeight="241.0" prefWidth="276.0" BorderPane.alignment="CENTER">
+                                       <center>
+                                          <TableView fx:id="tableviewpOrderReports" prefHeight="472.0" prefWidth="374.0" BorderPane.alignment="CENTER">
+                                             <columns>
+                                                <TableColumn prefWidth="75.0" text="C1" />
+                                                <TableColumn prefWidth="75.0" text="C2" />
+                                             </columns>
+                                          </TableView>
+                                       </center>
+                                       <top>
+                                          <AnchorPane prefHeight="24.0" prefWidth="475.0" style="-fx-background-color: #EBEBEB;" BorderPane.alignment="CENTER">
+                                             <children>
+                                                <DatePicker fx:id="DatefrompOrder" layoutX="78.0" layoutY="1.0" />
+                                                <DatePicker fx:id="DatetopOrder" layoutX="315.0" layoutY="1.0" />
+                                                <Label layoutX="29.0" layoutY="7.0" prefHeight="17.0" prefWidth="40.0" text="FROM" />
+                                                <Label layoutX="274.0" layoutY="5.0" text="TO" />
+                                                <ComboBox fx:id="supplierpOrders" layoutX="535.0" layoutY="2.0" prefHeight="25.0" prefWidth="167.0" promptText="--- Select Supplier---" />
+                                                <Button fx:id="processSupplierpOrder" layoutX="721.0" layoutY="2.0" mnemonicParsing="false" text="Process" />
+                                             </children>
+                                          </AnchorPane>
+                                       </top>
+                                    </BorderPane>
+                                 </center>
+                              </BorderPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="purchaseinvoiceReport" text="Purchase Invoice">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <BorderPane prefHeight="296.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <bottom>
+                                    <AnchorPane prefHeight="81.0" prefWidth="728.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <Label layoutX="473.0" layoutY="24.0" text="Report Type" AnchorPane.rightAnchor="305.0" />
+                                          <ComboBox layoutX="564.0" layoutY="20.0" prefWidth="150.0" AnchorPane.rightAnchor="129.0" />
+                                          <Button layoutX="757.0" layoutY="20.0" mnemonicParsing="false" text="Generate" AnchorPane.rightAnchor="21.0" />
+                                       </children>
+                                    </AnchorPane>
+                                 </bottom>
+                                 <center>
+                                    <BorderPane fx:id="borderpanepOrderWrapper1" prefHeight="241.0" prefWidth="276.0" BorderPane.alignment="CENTER">
+                                       <center>
+                                          <TableView fx:id="tableviewpOrderReports1" prefHeight="472.0" prefWidth="374.0" BorderPane.alignment="CENTER">
+                                             <columns>
+                                                <TableColumn prefWidth="75.0" text="C1" />
+                                                <TableColumn prefWidth="75.0" text="C2" />
+                                             </columns>
+                                          </TableView>
+                                       </center>
+                                       <top>
+                                          <AnchorPane prefHeight="24.0" prefWidth="475.0" style="-fx-background-color: #EBEBEB;" BorderPane.alignment="CENTER">
+                                             <children>
+                                                <DatePicker fx:id="DatefrompInvoice" layoutX="78.0" layoutY="1.0" />
+                                                <DatePicker fx:id="DatetopInvoice" layoutX="315.0" layoutY="1.0" />
+                                                <Label layoutX="29.0" layoutY="7.0" prefHeight="17.0" prefWidth="40.0" text="FROM" />
+                                                <Label layoutX="274.0" layoutY="5.0" text="TO" />
+                                                <ComboBox fx:id="supplierpOrders1" layoutX="535.0" layoutY="2.0" prefHeight="25.0" prefWidth="167.0" promptText="--- Select Supplier---" />
+                                                <Button fx:id="processSupplierpOrder1" layoutX="721.0" layoutY="2.0" mnemonicParsing="false" text="Process" />
+                                             </children>
+                                          </AnchorPane>
+                                       </top>
+                                    </BorderPane>
+                                 </center>
+                              </BorderPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="purchaseReportTab" text="Purchase Report">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <BorderPane prefHeight="296.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <bottom>
+                                    <AnchorPane prefHeight="81.0" prefWidth="728.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <Label layoutX="273.0" layoutY="32.0" text="Report Type" AnchorPane.rightAnchor="390.0" />
+                                          <ComboBox layoutX="364.0" layoutY="28.0" prefWidth="150.0" AnchorPane.rightAnchor="214.0" />
+                                          <Button layoutX="557.0" layoutY="28.0" mnemonicParsing="false" text="Generate" AnchorPane.rightAnchor="106.0" />
+                                       </children>
+                                    </AnchorPane>
+                                 </bottom>
+                                 <center>
+                                    <BorderPane fx:id="borderpanePurchaseWrapper" prefHeight="241.0" prefWidth="276.0" BorderPane.alignment="CENTER">
+                                       <center>
+                                          <TableView fx:id="tablePurchaseReport" prefHeight="472.0" prefWidth="374.0" BorderPane.alignment="CENTER">
+                                             <columns>
+                                                <TableColumn prefWidth="75.0" text="C1" />
+                                                <TableColumn prefWidth="75.0" text="C2" />
+                                             </columns>
+                                          </TableView>
+                                       </center>
+                                       <top>
+                                          <AnchorPane prefHeight="24.0" prefWidth="475.0" style="-fx-background-color: #EBEBEB;" BorderPane.alignment="CENTER">
+                                             <children>
+                                                <Label layoutX="57.0" layoutY="8.0" prefHeight="17.0" prefWidth="136.0" text="Select Item Category" />
+                                                <ComboBox fx:id="comboSelectCategory11" layoutX="214.0" layoutY="4.0" prefHeight="25.0" prefWidth="215.0" promptText="Select Category" />
+                                                <Button fx:id="btnProcesspurchasereport" layoutX="449.0" layoutY="2.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="186.0" text="PROCESS" />
+                                             </children>
+                                          </AnchorPane>
+                                       </top>
+                                    </BorderPane>
+                                 </center>
+                              </BorderPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="stockSuppliedTab" text="Stocking Report">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <BorderPane prefHeight="296.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <bottom>
+                                    <AnchorPane prefHeight="81.0" prefWidth="728.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <Button fx:id="buttonDailySalesReport2" layoutX="557.0" layoutY="28.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="233.0" text="Generate PDF Report" AnchorPane.rightAnchor="106.0" />
+                                          <Label layoutX="22.0" layoutY="28.0" prefHeight="26.0" prefWidth="103.0" text="TOTAL COST" />
+                                          <TextField fx:id="totalCostSupplied" layoutX="140.0" layoutY="22.0" prefHeight="37.0" prefWidth="135.0" />
+                                       </children>
+                                    </AnchorPane>
+                                 </bottom>
+                                 <center>
+                                    <BorderPane fx:id="borderpaneSuppliedStockWrapper" prefHeight="241.0" prefWidth="276.0" BorderPane.alignment="CENTER">
+                                       <center>
+                                          <TableView fx:id="tableStockSupplied" prefHeight="472.0" prefWidth="374.0" BorderPane.alignment="CENTER">
+                                             <columns>
+                                                <TableColumn prefWidth="75.0" text="C1" />
+                                                <TableColumn prefWidth="75.0" text="C2" />
+                                             </columns>
+                                          </TableView>
+                                       </center>
+                                       <top>
+                                          <AnchorPane prefHeight="24.0" prefWidth="475.0" style="-fx-background-color: #EBEBEB;" BorderPane.alignment="CENTER">
+                                             <children>
+                                                <Label layoutX="20.0" layoutY="8.0" prefHeight="17.0" prefWidth="118.0" text="Select Supplier" />
+                                                <ComboBox fx:id="comboStockSupplier" layoutX="157.0" layoutY="4.0" prefHeight="25.0" prefWidth="197.0" promptText="Supplier" />
+                                                <DatePicker fx:id="fromDateSupplied" editable="false" layoutX="448.0" layoutY="4.0" prefHeight="25.0" prefWidth="123.0" />
+                                                <DatePicker fx:id="toDateSupplied" editable="false" layoutX="651.0" layoutY="2.0" prefHeight="25.0" prefWidth="131.0" />
+                                                <Button fx:id="butonStockSupplies" layoutX="794.0" layoutY="2.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="103.0" text="PROCESS" />
+                                                <Label layoutX="370.0" layoutY="6.0" prefHeight="17.0" prefWidth="68.0" text="FROM" />
+                                                <Label layoutX="581.0" layoutY="7.0" prefHeight="17.0" prefWidth="56.0" text="TO" />
+                                             </children>
+                                          </AnchorPane>
+                                       </top>
+                                    </BorderPane>
+                                 </center>
+                              </BorderPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  
+               </tabs>
+            </TabPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.solutions.pos.controllers.MainUIController">
+   <children>
+      <BorderPane layoutX="22.0" layoutY="48.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <AnchorPane prefHeight="90.0" prefWidth="600.0" style="-fx-background-color: #414143;" BorderPane.alignment="CENTER">
+               <children>
+                  <Pane layoutX="14.0" layoutY="126.0" prefHeight="10.0" prefWidth="200.0" style="-fx-background-color: #FF9500;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+               </children></AnchorPane>
+         </top>
+         <center>
+            <BorderPane fx:id="borderpaneWrapper" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <left>
+                  <AnchorPane prefHeight="510.0" prefWidth="213.0" style="-fx-background-color: #424F5A;" BorderPane.alignment="CENTER">
+                     <children>
+                        <Button fx:id="linkSalesOperations" layoutX="7.0" layoutY="81.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="208.0" text="         POS SALES OPERATIONS " />
+                        <Button fx:id="linkStockOperation" layoutX="8.0" layoutY="129.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="206.0" text="       POS STOCK OPERATIONS " />
+                        <Button fx:id="linksetup" layoutX="7.0" layoutY="172.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="206.0" text="                                     SETUP  " />
+                        <Button fx:id="linkExpense" layoutX="7.0" layoutY="220.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="206.0" text="                          POS EXPENSE" />
+                        <Button fx:id="report" layoutX="7.0" layoutY="268.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="205.0" text="                                   REPORT" />
+                        <Label layoutX="6.0" layoutY="21.0" mouseTransparent="true" prefHeight="45.0" prefWidth="211.0" text="              Menu " textFill="WHITE">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </left>
+               <center>
+                  <AnchorPane prefHeight="510.0" prefWidth="795.0" style="-fx-background-color: #E6E7E9;" BorderPane.alignment="CENTER" />
+               </center>
+            </BorderPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

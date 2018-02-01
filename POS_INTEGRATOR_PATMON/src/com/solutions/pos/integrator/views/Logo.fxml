@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="292.0" prefWidth="399.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.solutions.pos.integrator.controllers.LogoController">
+   <children>
+      <Pane layoutX="8.0" layoutY="11.0" prefHeight="272.0" prefWidth="383.0" style="-fx-border-color: grey;">
+         <children>
+            <Pane fx:id="logo" layoutX="78.0" layoutY="46.0" prefHeight="180.0" prefWidth="227.0" style="-fx-border-color: grey;">
+               <children>
+                  <ImageView fx:id="logoImage" fitHeight="180.0" fitWidth="233.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </Pane>
+            <Button fx:id="btnSetlogo" layoutX="102.0" layoutY="233.0" mnemonicParsing="false" text="Browse" />
+            <Label layoutX="137.0" layoutY="14.0" text="Set Logo">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Button fx:id="saveBtn" layoutX="209.0" layoutY="233.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="68.0" text="Save" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

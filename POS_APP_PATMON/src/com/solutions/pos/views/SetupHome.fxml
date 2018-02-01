@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="615.0" prefWidth="728.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.solutions.pos.controllers.SetupHomeController">
+   <children>
+      <BorderPane layoutX="10.0" layoutY="10.0" prefHeight="555.0" prefWidth="728.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <TabPane fx:id="setupTab" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+               <tabs>
+                  <Tab fx:id="skuCategoriestab" text="SKU Categories ">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <BorderPane prefHeight="296.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <center>
+                                    <BorderPane fx:id="borderpaneCategoriesWrapper" prefHeight="241.0" prefWidth="276.0" BorderPane.alignment="CENTER">
+                                       <center>
+                                          <TableView fx:id="categoriesTV" prefHeight="472.0" prefWidth="374.0" BorderPane.alignment="CENTER">
+                                             <columns>
+                                                <TableColumn prefWidth="75.0" text="C1" />
+                                                <TableColumn prefWidth="75.0" text="C2" />
+                                             </columns>
+                                          </TableView>
+                                       </center>
+                                       <top>
+                                          <AnchorPane prefHeight="24.0" prefWidth="475.0" style="-fx-background-color: #EBEBEB;" BorderPane.alignment="CENTER">
+                                             <children>
+                                                <TextField fx:id="categoriesSearch" layoutX="312.0" layoutY="8.0" AnchorPane.bottomAnchor="4.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="4.0" />
+                                                <Label layoutX="268.0" layoutY="8.0" text="Search" AnchorPane.bottomAnchor="4.0" AnchorPane.rightAnchor="179.0" AnchorPane.topAnchor="4.0" />
+                                             </children>
+                                          </AnchorPane>
+                                       </top>
+                                    </BorderPane>
+                                 </center>
+                                 <right>
+                                    <AnchorPane prefHeight="505.0" prefWidth="383.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <Label layoutX="90.0" layoutY="14.0" prefHeight="40.0" prefWidth="170.0" text="Input Data" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="58.0" AnchorPane.topAnchor="14.0">
+                                             <font>
+                                                <Font size="28.0" />
+                                             </font>
+                                          </Label>
+                                          <Separator layoutX="8.0" layoutY="65.0" prefWidth="200.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="65.0" />
+                                          <GridPane layoutX="41.0" layoutY="97.0" prefHeight="282.0" prefWidth="332.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="90.0">
+                                             <children>
+                                                <Label text="SKU Name" />
+                                                <TextField fx:id="skuName" GridPane.rowIndex="1" />
+                                                <GridPane GridPane.rowIndex="4">
+                                                   <children>
+                                                      <Button fx:id="saveCategory" mnemonicParsing="false" prefHeight="25.0" prefWidth="121.0" text="Save" GridPane.columnIndex="1" />
+                                                   </children>
+                                                   <columnConstraints>
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="210.0" minWidth="10.0" prefWidth="210.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="161.0" minWidth="10.0" prefWidth="122.0" />
+                                                   </columnConstraints>
+                                                   <rowConstraints>
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                   </rowConstraints>
+                                                </GridPane>
+                                                <Label text="Description" GridPane.rowIndex="2" />
+                                                <TextArea fx:id="categoryDescription" prefHeight="134.0" prefWidth="158.0" GridPane.rowIndex="3" />
+                                             </children>
+                                             <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="332.0" minWidth="10.0" prefWidth="321.0" />
+                                             </columnConstraints>
+                                             <rowConstraints>
+                                                <RowConstraints maxHeight="72.0" minHeight="10.0" prefHeight="23.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="127.0" minHeight="10.0" prefHeight="44.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="127.0" minHeight="10.0" prefHeight="44.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="135.0" minHeight="10.0" prefHeight="135.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="43.0" minHeight="10.0" prefHeight="43.0" vgrow="SOMETIMES" />
+                                             </rowConstraints>
+                                          </GridPane>
+                                       </children>
+                                    </AnchorPane>
+                                 </right>
+                              </BorderPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="skuRegTab" text="SKU Registration">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <BorderPane fx:id="skuRegBorder" prefHeight="296.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <center>
+                                    <BorderPane fx:id="borderpaneskuRegWrapper" prefHeight="241.0" prefWidth="276.0" BorderPane.alignment="CENTER">
+                                       <center>
+                                          <TableView fx:id="skuTV" prefHeight="472.0" prefWidth="374.0" BorderPane.alignment="CENTER">
+                                             <columns>
+                                                <TableColumn prefWidth="75.0" text="C1" />
+                                                <TableColumn prefWidth="75.0" text="C2" />
+                                             </columns>
+                                          </TableView>
+                                       </center>
+                                       <top>
+                                          <AnchorPane prefHeight="24.0" prefWidth="475.0" style="-fx-background-color: #EBEBEB;" BorderPane.alignment="CENTER">
+                                             <children>
+                                                <TextField fx:id="searchSkus" layoutX="312.0" layoutY="8.0" AnchorPane.bottomAnchor="4.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="4.0" />
+                                                <Label layoutX="268.0" layoutY="8.0" text="Search" AnchorPane.bottomAnchor="4.0" AnchorPane.rightAnchor="179.0" AnchorPane.topAnchor="4.0" />
+                                             </children>
+                                          </AnchorPane>
+                                       </top>
+                                    </BorderPane>
+                                 </center>
+                                 <right>
+                                    <AnchorPane prefHeight="586.0" prefWidth="290.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <Label layoutX="90.0" layoutY="14.0" prefHeight="40.0" prefWidth="170.0" text="Input Data" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="58.0" AnchorPane.topAnchor="14.0">
+                                             <font>
+                                                <Font size="28.0" />
+                                             </font>
+                                          </Label>
+                                          <Separator layoutX="8.0" layoutY="65.0" prefWidth="200.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="65.0" />
+                                          <GridPane prefHeight="469.0" prefWidth="230.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="90.0">
+                                             <children>
+                                                <GridPane prefHeight="46.0" prefWidth="230.0" GridPane.rowIndex="14">
+                                                   <children>
+                                                      <Button fx:id="saveSkuRegistration" mnemonicParsing="false" prefHeight="25.0" prefWidth="128.0" text="Save" GridPane.columnIndex="1" />
+                                                   </children>
+                                                   <columnConstraints>
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="210.0" minWidth="10.0" prefWidth="116.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="161.0" minWidth="10.0" prefWidth="112.0" />
+                                                   </columnConstraints>
+                                                   <rowConstraints>
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                   </rowConstraints>
+                                                </GridPane>
+                                                <Label text="SKU Name" GridPane.rowIndex="2" />
+                                                <Label text="Description" GridPane.rowIndex="4" />
+                                                <Label text="Retail Price" GridPane.rowIndex="6" />
+                                                <Label text="Wholesale Price" GridPane.rowIndex="8" />
+                                                <Label text="VAT" GridPane.rowIndex="10" />
+                                                <Label text="Reorder Level" GridPane.rowIndex="12" />
+                                                <TextField fx:id="retailPrice" GridPane.rowIndex="7" />
+                                                <TextField fx:id="wholesalePrice" GridPane.rowIndex="9" />
+                                                <TextField fx:id="reorderLevel" GridPane.rowIndex="13" />
+                                                <TextField fx:id="skuRegName" GridPane.rowIndex="3" />
+                                                <TextArea fx:id="skuRegDescription" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="5" />
+                                                <Label prefHeight="17.0" prefWidth="194.0" text="SKU Category" />
+                                                <ComboBox fx:id="cbSkuCategories" prefHeight="25.0" prefWidth="231.0" GridPane.rowIndex="1" />
+                                                <ComboBox fx:id="vat" prefHeight="25.0" prefWidth="230.0" GridPane.rowIndex="11" />
+                                             </children>
+                                             <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="332.0" minWidth="10.0" prefWidth="321.0" />
+                                             </columnConstraints>
+                                             <rowConstraints>
+                                                <RowConstraints maxHeight="127.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="127.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="127.0" minHeight="10.0" prefHeight="22.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="127.0" minHeight="10.0" prefHeight="34.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="127.0" minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="127.0" minHeight="10.0" prefHeight="101.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="127.0" minHeight="10.0" prefHeight="19.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="135.0" minHeight="10.0" prefHeight="37.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="135.0" minHeight="10.0" prefHeight="21.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="135.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="135.0" minHeight="10.0" prefHeight="21.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="135.0" minHeight="10.0" prefHeight="31.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="135.0" minHeight="10.0" prefHeight="27.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="135.0" minHeight="10.0" prefHeight="24.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="141.0" minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES" />
+                                             </rowConstraints>
+                                          </GridPane>
+                                       </children>
+                                    </AnchorPane>
+                                 </right>
+                              </BorderPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="CustomerRegTab" text="Customer Registration">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <BorderPane prefHeight="296.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <center>
+                                    <BorderPane fx:id="borderpaneCustomerWrapper" prefHeight="241.0" prefWidth="276.0" BorderPane.alignment="CENTER">
+                                       <center>
+                                          <TableView fx:id="customerTV" prefHeight="472.0" prefWidth="374.0" BorderPane.alignment="CENTER">
+                                             <columns>
+                                                <TableColumn prefWidth="75.0" text="C1" />
+                                                <TableColumn prefWidth="75.0" text="C2" />
+                                             </columns>
+                                          </TableView>
+                                       </center>
+                                       <top>
+                                          <AnchorPane prefHeight="24.0" prefWidth="475.0" style="-fx-background-color: #EBEBEB;" BorderPane.alignment="CENTER">
+                                             <children>
+                                                <TextField fx:id="customerSearch" layoutX="312.0" layoutY="8.0" AnchorPane.bottomAnchor="4.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="4.0" />
+                                                <Label layoutX="268.0" layoutY="8.0" text="Search" AnchorPane.bottomAnchor="4.0" AnchorPane.rightAnchor="179.0" AnchorPane.topAnchor="4.0" />
+                                             </children>
+                                          </AnchorPane>
+                                       </top>
+                                    </BorderPane>
+                                 </center>
+                                 <right>
+                                    <AnchorPane prefHeight="505.0" prefWidth="383.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <Label layoutX="90.0" layoutY="14.0" prefHeight="40.0" prefWidth="170.0" text="Input Data" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="58.0" AnchorPane.topAnchor="14.0">
+                                             <font>
+                                                <Font size="28.0" />
+                                             </font>
+                                          </Label>
+                                          <Separator layoutX="8.0" layoutY="65.0" prefWidth="200.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="65.0" />
+                                          <GridPane prefHeight="316.0" prefWidth="323.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="90.0">
+                                             <children>
+                                                <GridPane prefHeight="13.0" prefWidth="228.0" GridPane.rowIndex="10">
+                                                   <children>
+                                                      <Button fx:id="saveCustomer" mnemonicParsing="false" prefHeight="25.0" prefWidth="128.0" text="Save" GridPane.columnIndex="1" />
+                                                   </children>
+                                                   <columnConstraints>
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="210.0" minWidth="10.0" prefWidth="198.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="161.0" minWidth="10.0" prefWidth="125.0" />
+                                                   </columnConstraints>
+                                                   <rowConstraints>
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                   </rowConstraints>
+                                                </GridPane>
+                                                <Label text="Name" />
+                                                <Label text="ID Number" GridPane.rowIndex="2" />
+                                                <Label text="Phone Number" GridPane.rowIndex="4" />
+                                                <Label text="Address" GridPane.rowIndex="6" />
+                                                <Label text="Email" GridPane.rowIndex="8" />
+                                                <TextField fx:id="customerIdno" GridPane.rowIndex="3" />
+                                                <TextField fx:id="customerPhoneNo" GridPane.rowIndex="5" />
+                                                <TextField fx:id="customerAddress" GridPane.rowIndex="7" />
+                                                <TextField fx:id="customerEmail" GridPane.rowIndex="9" />
+                                                <TextField fx:id="customerName" GridPane.rowIndex="1" />
+                                             </children>
+                                             <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="332.0" minWidth="10.0" prefWidth="321.0" />
+                                             </columnConstraints>
+                                             <rowConstraints>
+                                                <RowConstraints maxHeight="127.0" minHeight="10.0" prefHeight="22.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="127.0" minHeight="10.0" prefHeight="34.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="127.0" minHeight="10.0" prefHeight="19.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="135.0" minHeight="10.0" prefHeight="37.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="135.0" minHeight="10.0" prefHeight="21.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="135.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="135.0" minHeight="10.0" prefHeight="21.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="135.0" minHeight="10.0" prefHeight="31.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="135.0" minHeight="10.0" prefHeight="27.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="135.0" minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="141.0" minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES" />
+                                             </rowConstraints>
+                                          </GridPane>
+                                       </children>
+                                    </AnchorPane>
+                                 </right>
+                              </BorderPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="supplierRegTab" text="Supplier Registration">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <BorderPane prefHeight="296.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <center>
+                                    <BorderPane fx:id="borderpaneSupplierWrapper" prefHeight="241.0" prefWidth="276.0" BorderPane.alignment="CENTER">
+                                       <center>
+                                          <TableView fx:id="supplierTV" prefHeight="472.0" prefWidth="374.0" BorderPane.alignment="CENTER">
+                                             <columns>
+                                                <TableColumn prefWidth="75.0" text="C1" />
+                                                <TableColumn prefWidth="75.0" text="C2" />
+                                             </columns>
+                                          </TableView>
+                                       </center>
+                                       <top>
+                                          <AnchorPane prefHeight="24.0" prefWidth="475.0" style="-fx-background-color: #EBEBEB;" BorderPane.alignment="CENTER">
+                                             <children>
+                                                <TextField fx:id="supplierSearch" layoutX="312.0" layoutY="8.0" AnchorPane.bottomAnchor="4.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="4.0" />
+                                                <Label layoutX="268.0" layoutY="8.0" text="Search" AnchorPane.bottomAnchor="4.0" AnchorPane.rightAnchor="179.0" AnchorPane.topAnchor="4.0" />
+                                             </children>
+                                          </AnchorPane>
+                                       </top>
+                                    </BorderPane>
+                                 </center>
+                                 <right>
+                                    <AnchorPane prefHeight="505.0" prefWidth="383.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <Label layoutX="90.0" layoutY="14.0" prefHeight="40.0" prefWidth="170.0" text="Input Data" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="58.0" AnchorPane.topAnchor="14.0">
+                                             <font>
+                                                <Font size="28.0" />
+                                             </font>
+                                          </Label>
+                                          <Separator layoutX="8.0" layoutY="65.0" prefWidth="200.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="65.0" />
+                                          <GridPane prefHeight="359.0" prefWidth="323.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="90.0">
+                                             <children>
+                                                <GridPane prefHeight="13.0" prefWidth="228.0" GridPane.rowIndex="12">
+                                                   <children>
+                                                      <Button fx:id="saveSupplier" mnemonicParsing="false" prefHeight="25.0" prefWidth="128.0" text="Save" GridPane.columnIndex="1" />
+                                                   </children>
+                                                   <columnConstraints>
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="210.0" minWidth="10.0" prefWidth="198.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="161.0" minWidth="10.0" prefWidth="125.0" />
+                                                   </columnConstraints>
+                                                   <rowConstraints>
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                   </rowConstraints>
+                                                </GridPane>
+                                                <Label text="Name" />
+                                                <Label text="ID Number" GridPane.rowIndex="2" />
+                                                <Label text="Phone Number" GridPane.rowIndex="4" />
+                                                <Label text="Address" GridPane.rowIndex="6" />
+                                                <Label text="Email" GridPane.rowIndex="8" />
+                                                <TextField fx:id="supplierIDNO" GridPane.rowIndex="3" />
+                                                <TextField fx:id="supplierPhoneNO" GridPane.rowIndex="5" />
+                                                <TextField fx:id="supplierAddress" GridPane.rowIndex="7" />
+                                                <TextField fx:id="supplierEmail" GridPane.rowIndex="9" />
+                                                <TextField fx:id="supplierName" GridPane.rowIndex="1" />
+                                                <Label text="Company" GridPane.rowIndex="10" />
+                                                <TextField fx:id="supplierCompany" GridPane.rowIndex="11" />
+                                             </children>
+                                             <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="332.0" minWidth="10.0" prefWidth="321.0" />
+                                             </columnConstraints>
+                                             <rowConstraints>
+                                                <RowConstraints maxHeight="127.0" minHeight="10.0" prefHeight="22.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="127.0" minHeight="10.0" prefHeight="34.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="127.0" minHeight="10.0" prefHeight="19.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="135.0" minHeight="10.0" prefHeight="37.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="135.0" minHeight="10.0" prefHeight="21.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="135.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="135.0" minHeight="10.0" prefHeight="21.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="135.0" minHeight="10.0" prefHeight="31.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="135.0" minHeight="10.0" prefHeight="27.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="135.0" minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="135.0" minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="135.0" minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="141.0" minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES" />
+                                             </rowConstraints>
+                                          </GridPane>
+                                       </children>
+                                    </AnchorPane>
+                                 </right>
+                              </BorderPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="expenseRegTab" text="Expense Registration">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <BorderPane prefHeight="296.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <center>
+                                    <BorderPane fx:id="borderpaneExpesnseWrapper" prefHeight="241.0" prefWidth="276.0" BorderPane.alignment="CENTER">
+                                       <center>
+                                          <TableView fx:id="expenseTV" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                             <columns>
+                                                <TableColumn prefWidth="75.0" text="C1" />
+                                                <TableColumn prefWidth="75.0" text="C2" />
+                                             </columns>
+                                          </TableView>
+                                       </center>
+                                       <top>
+                                          <AnchorPane prefHeight="24.0" prefWidth="475.0" style="-fx-background-color: #EBEBEB;" BorderPane.alignment="CENTER">
+                                             <children>
+                                                <TextField fx:id="expenseSearch" layoutX="312.0" layoutY="8.0" AnchorPane.bottomAnchor="4.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="4.0" />
+                                                <Label layoutX="268.0" layoutY="8.0" text="Search" AnchorPane.bottomAnchor="4.0" AnchorPane.rightAnchor="179.0" AnchorPane.topAnchor="4.0" />
+                                             </children>
+                                          </AnchorPane>
+                                       </top>
+                                    </BorderPane>
+                                 </center>
+                                 <right>
+                                    <AnchorPane prefHeight="505.0" prefWidth="381.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <Label layoutX="99.0" layoutY="14.0" prefHeight="40.0" prefWidth="183.0" text="Input Data" AnchorPane.leftAnchor="99.0" AnchorPane.rightAnchor="99.0" AnchorPane.topAnchor="14.0">
+                                             <font>
+                                                <Font size="22.0" />
+                                             </font>
+                                          </Label>
+                                          <Separator layoutX="8.0" layoutY="60.0" prefWidth="200.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="60.0" />
+                                          <GridPane prefHeight="282.0" prefWidth="332.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="29.0" AnchorPane.topAnchor="90.0">
+                                             <children>
+                                                <Label text="Name" />
+                                                <TextField fx:id="expenseName" GridPane.rowIndex="1" />
+                                                <GridPane GridPane.rowIndex="4">
+                                                   <children>
+                                                      <Button fx:id="saveExpense" mnemonicParsing="false" prefHeight="25.0" prefWidth="121.0" text="Save" GridPane.columnIndex="1" />
+                                                   </children>
+                                                   <columnConstraints>
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="210.0" minWidth="10.0" prefWidth="210.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="161.0" minWidth="10.0" prefWidth="122.0" />
+                                                   </columnConstraints>
+                                                   <rowConstraints>
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                   </rowConstraints>
+                                                </GridPane>
+                                                <Label text="Description" GridPane.rowIndex="2" />
+                                                <TextArea fx:id="expenseDescription" prefHeight="134.0" prefWidth="158.0" GridPane.rowIndex="3" />
+                                             </children>
+                                             <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="332.0" minWidth="10.0" prefWidth="321.0" />
+                                             </columnConstraints>
+                                             <rowConstraints>
+                                                <RowConstraints maxHeight="72.0" minHeight="10.0" prefHeight="23.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="127.0" minHeight="10.0" prefHeight="44.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="127.0" minHeight="10.0" prefHeight="44.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="135.0" minHeight="10.0" prefHeight="135.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="43.0" minHeight="10.0" prefHeight="43.0" vgrow="SOMETIMES" />
+                                             </rowConstraints>
+                                          </GridPane>
+                                       </children>
+                                    </AnchorPane>
+                                 </right>
+                              </BorderPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+               </tabs>
+            </TabPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
